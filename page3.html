@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ознакомление с кампусом - РГАУ-МСХА имени К.А. Тимирязева</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <header>
+        <div class="grass-container">
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+       </div>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="page2.html">Об университете</a>
+        <a href="page3.html">О кампусе</a>
+        <a href="page4.html">Контакты</a>
+      </nav>
+    </header>
+    <div class="after_header">
+      <div class="logo">
+        <img src="img\Removal-953.png" alt="крутая картинца чисто топчик">
+      </div>
+      <div class="logo_text">
+        <p>
+          РОССИЙСКИЙ ГОСУДАРСТВЕННЫЙ АГРАРНЫЙ УНИВЕРСИТЕТ - МСХА ИМЕНИ К.А. ТИМИРЯЗЕВА
+        </p>
+      </div>
+    </div>
+    <div class="page3_info">
+        <h4>О кампусе</h4>
+        <div class="page3_text">
+            <p>РГАУ-МСХА имени К.А. Тимирязева представляет собой превосходный образец современного университетского кампуса, включающего в себя впечатляющее количество корпусов - целых 37, а также общежития и квартиры для студентов. Он охватывает обширную территорию, измеряемую сотнями гектаров, что создает уникальные возможности для академической работы, научных исследований, а также разнообразной деятельности студентов. Вместе с тем, университет привлекает более 18 тысяч студентов, создавая динамичное и разнообразное образовательное сообщество с широким спектром интересов и амбиций.</p>
+
+        </div>
+        <div class="page3_text2">
+            <p>РГАУ-МСХА имени К.А. Тимирязева - это не только образовательная база, но и настоящий оазис природы в сердце города. Благодаря множеству деревьев, парковых зон и экологически чистой территории, студенты имеют возможность наслаждаться зеленью и свежим воздухом, что способствует их учебным и творческим достижениям, создавая уникальную атмосферу для развития как личности.</p>
+        </div>
+        
+    </div>
+
+    <div class="page3_images">
+      <div class="page3_img1">
+        <img class="img33" src="img/image 4.png" alt="корпус" onclick="openFullscreen('img/image 4.png')">
+      </div>
+      <div class="page3_img2">
+        <img class="img44" src="img/image 5.png" alt="корпус"onclick="openFullscreen('img/image 5.png')">
+      </div>
+    </div>
+    
+   
+  
+    
+    <footer>
+      <div class="logo1">
+        <img src="img/Removal-953.png" alt="Логотип">
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="page2.html">Об университете</a></li>
+          <li><a href="page3.html">О кампусе</a></li>
+          <li><a href="page4.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>© РГАУ-МСХА им. К.А. Тимирязева, 2024</p>
+      </div>
+    </footer>
+
+    <div class="fullscreen" id="fullscreenContainer" style="display: none;">
+      <img id="fullscreenImg" src="" alt="Открытое изображение">
+    </div>
+  
+    <script>
+      function openFullscreen(imgSrc) {
+        var fullscreenContainer = document.getElementById('fullscreenContainer');
+        var fullscreenImg = document.getElementById('fullscreenImg');
+        fullscreenImg.src = imgSrc;
+        fullscreenContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // чтобы запретить прокрутку страницы
+      }
+  
+      document.getElementById('fullscreenContainer').addEventListener('click', function () {
+        this.style.display = 'none';
+        document.body.style.overflow = 'auto'; // возвращаем прокрутку обратно
+      });
+    </script>
+    
+  
+</body>
+</html>

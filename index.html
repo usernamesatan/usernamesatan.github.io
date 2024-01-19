@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ознакомление с кампусом - РГАУ-МСХА имени К.А. Тимирязева</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="grass-container">
+        <div class="grass"></div>
+        <div class="grass"></div>
+        <div class="grass"></div>
+   </div>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="page2.html">Об университете</a>
+        <a href="page3.html">О кампусе</a>
+        <a href="page4.html">Контакты</a>
+      </nav>
+    </header>
+    <div class="after_header">
+      <div class="logo">
+        <img src="img\Removal-953.png" alt="крутая картинца чисто топчик">
+      </div>
+      <div class="logo_text">
+        <p>
+          РОССИЙСКИЙ ГОСУДАРСТВЕННЫЙ АГРАРНЫЙ УНИВЕРСИТЕТ - МСХА ИМЕНИ К.А. ТИМИРЯЗЕВА
+        </p>
+      </div>
+
+    </div>
+    
+    <div class="campus_info">
+      <h1>
+        Наш кампус
+      </h1>
+      <div class="campus_text">
+        <p>Российский государственный аграрный университет - Московская государственная сельскохозяйственная академия (РГАУ-МСХА) имени К.А. Тимирязева, 
+          известный своей богатой историей и академическим превосходством, также гордится тем, что его кампус представляет собой обширную и 
+          экологически благоприятную зону, усыпанную зеленью, что создает уникальную атмосферу для обучения и жизни студентов.</p>
+       </div>
+    </div>
+
+    <div class="campus_map">
+      <h2>Карта кампуса</h2>
+      <div class="map_img">
+        <img class="map_img1" src="img/timacad_map.jpg" alt="карта кампуса" onclick="openFullscreen(this)">
+      </div>
+    </div>
+  
+    
+    <footer>
+      <div class="logo1">
+        <img src="img/Removal-953.png" alt="Логотип">
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="page2.html">Об университете</a></li>
+          <li><a href="page3.html">О кампусе</a></li>
+          <li><a href="page4.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>© РГАУ-МСХА им. К.А. Тимирязева, 2024</p>
+      </div>
+    </footer>
+    
+  
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+  </div>
+  
+  <div id="fullscreenContainer" class="fullscreen" style="display: none;">
+    <img id="fullscreenImg" src="img/timacad_map.jpg" alt="Открытое изображение">
+  </div>
+
+  <script>
+    function openFullscreen(img) {
+        var fullscreenContainer = document.getElementById('fullscreenContainer');
+        var fullscreenImg = document.getElementById('fullscreenImg');
+        fullscreenImg.src = img.src;
+        fullscreenContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // чтобы запретить прокрутку страницы
+    }
+
+    document.getElementById('fullscreenContainer').addEventListener('click', function () {
+        this.style.display = 'none';
+        document.body.style.overflow = 'auto'; // возвращаем прокрутку обратно
+    });
+</script>
+</body>
+</html>
